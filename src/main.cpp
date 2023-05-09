@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 
 
 /****************************** RUN NETWORK/BENCHMARKS ******************************/ 
-	start_m();
+//	start_m();
 
 	// whichNetwork = "Mat-Mul";
 	// testMatMul(784, 128, 10, NUM_ITERATIONS);
@@ -135,20 +135,65 @@ int main(int argc, char** argv)
 	// testMaxPoolDerivative(24, 24, 2, 2, 16, NUM_ITERATIONS);
 	// testMaxPoolDerivative(8, 8, 4, 4, 50, NUM_ITERATIONS);
 
-	whichNetwork += " train";
-	train(network, config);
+//	whichNetwork += " train";
+//	train(network, config);
 
 	// whichNetwork += " test";
 	// test(network);
 
 
 
-	end_m(whichNetwork);
-	cout << "----------------------------------" << endl;  	
-	cout << NUM_OF_PARTIES << "PC code, P" << partyNum << endl;
-	cout << NUM_ITERATIONS << " iterations, " << whichNetwork << ", batch size " << MINI_BATCH_SIZE << endl;
-	cout << "----------------------------------" << endl << endl;  
+//	end_m(whichNetwork);
+//	cout << "----------------------------------" << endl;  	
+//	cout << NUM_OF_PARTIES << "PC code, P" << partyNum << endl;
+//	cout << NUM_ITERATIONS << " iterations, " << whichNetwork << ", batch size " << MINI_BATCH_SIZE << endl;
+//	cout << "----------------------------------" << endl << endl;  
 
+	cout << "====================" << endl;
+	cout << "Unit Test Begin" << endl;
+	cout << "====================" << endl;
+
+	cout << "===debugDotProd() Begin ===" << endl;
+	debugDotProd();
+	cout << "===debugDotProd() End   ===" << endl << endl;
+
+	cout << "===debugComputeMSB() Begin ===" << endl;
+	debugComputeMSB();
+	cout << "===debugComputeMSB() End ===" << endl << endl;
+
+	cout << "===debugComputeShareConvert() Begin ===" << endl;
+	debugComputeShareConvert();
+	cout << "===debugComputeShareConvert() End ===" << endl << endl;
+
+	cout << "===debugPC() Begin ===" << endl;
+	debugPC();
+	cout << "===debugPC() End ===" << endl << endl;
+
+	cout << "===debugDivision() Begin ===" << endl;
+	debugDivision();
+	cout << "===debugDivision() End ===" << endl << endl;
+	
+	cout << "===debugMax() Begin ===" << endl;
+	debugMax();
+	cout << "===debugMax() End ===" << endl << endl;
+	
+	cout << "===debugSS() Begin ===" << endl;
+	debugSS();
+	cout << "===debugSS() End ===" << endl << endl;
+
+	cout << "===debugMatMul() Begin ===" << endl;
+	debugMatMul();
+	cout << "===debugMatMul() End ===" << endl << endl;
+
+	cout << "===debugReLUPrime() Begin ===" << endl;
+	debugReLUPrime();
+	cout << "===debugReLUPrime() End ===" << endl << endl;
+
+	cout << "===debugMaxIndex() Begin ===" << endl;
+	debugMaxIndex();
+	cout << "===debugMaxIndex() End ===" << endl << endl;
+
+	cout << "My Test End" << endl;
 
 /****************************** CLEAN-UP ******************************/ 
 	delete aes_common;

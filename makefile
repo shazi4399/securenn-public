@@ -7,7 +7,8 @@ OBJ_FILES    	  += $(patsubst util/%.cpp, util/%.o,$(OBJ_CPP_FILES))
 HEADER_FILES       = $(wildcard src/*.h)
 
 # FLAGS := -g -O0 -w -std=c++11 -pthread -msse4.1 -maes -msse2 -mpclmul -fpermissive -fpic
-FLAGS := -O3 -w -std=c++11 -pthread -msse4.1 -maes -msse2 -mpclmul -fpermissive -fpic
+# FLAGS := -O3 -w -std=c++11 -pthread -msse4.1 -maes -msse2 -mpclmul -fpermissive -fpic
+FLAGS := -O0 -w -std=c++11 -pthread -msse4.1 -maes -msse2 -mpclmul -fpermissive -fpic
 LIBS := -lcrypto -lssl
 OBJ_INCLUDES := -I 'lib_eigen/' -I 'util/Miracl/' -I 'util/'
 BMR_INCLUDES := $($(OBJ_INCLUDES), -L./)
