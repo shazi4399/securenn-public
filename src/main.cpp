@@ -100,7 +100,7 @@ int main(int argc, char** argv)
 
 	if (PARALLEL)
 		aes_parallel->precompute();
-
+initializeMPC();
 
 /****************************** RUN NETWORK/BENCHMARKS ******************************/ 
 //	start_m();
